@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="788.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="268.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Realizar llamada" wrappingWidth="303.6708984375">
+         <font>
+            <Font name="Cambria Bold" size="38.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="107.0" layoutY="722.0" onAction="#realizarLlamada" prefHeight="31.0" prefWidth="626.0" style="-fx-background-color: #3357FF;" text="Realizar llamada" textFill="WHITE" />
+      <TableView fx:id="tablaCliente" layoutX="107.0" layoutY="167.0" prefHeight="265.0" prefWidth="626.0">
+        <columns>
+          <TableColumn fx:id="cedulaCol" prefWidth="75.0" text="Cedula" />
+          <TableColumn fx:id="nombreCol" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="telefonoCol" prefWidth="75.0" text="Telefono" />
+            <TableColumn fx:id="emailCol" prefWidth="75.0" text="Email" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="tablaProducto" layoutX="107.0" layoutY="502.0" prefHeight="200.0" prefWidth="626.0">
+        <columns>
+          <TableColumn fx:id="idColProducto" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="nombreColProducto" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="descColProducto" prefWidth="75.0" text="Descripcion" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label fx:id="nombre" alignment="CENTER" layoutX="107.0" layoutY="76.0" prefHeight="31.0" prefWidth="626.0">
+         <font>
+            <Font name="Cambria" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="128.0" text="Clientes">
+         <font>
+            <Font name="Cambria Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="459.0" text="Productos">
+         <font>
+            <Font name="Cambria Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="buscarCliente" layoutX="225.0" layoutY="128.0" prefHeight="31.0" prefWidth="506.0" promptText="Buscar cliente..." />
+      <TextField fx:id="buscarProducto" layoutX="255.0" layoutY="459.0" prefHeight="31.0" prefWidth="477.0" promptText="Buscar producto..." />
+   </children>
+</AnchorPane>
